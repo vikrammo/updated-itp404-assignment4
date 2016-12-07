@@ -1,0 +1,22 @@
+{{#each model as |data|}}
+
+
+  <div class="Object">
+    <h2>Score: {{data.data.score}}</h2>
+
+    <p><a href="{{data.url}}">Title: {{data.data.title}}</a></p>
+
+    <p>Comments: {{data.data.num_comments}}</p>
+
+    <p>
+      {{#if data.data.archived}}
+        Archived
+      {{else}}
+        Not Archived
+      {{/if}}
+    </p>
+
+  </div>
+
+
+{{/each}}
